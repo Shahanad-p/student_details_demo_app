@@ -64,24 +64,24 @@ class _ListStudentWidgetState extends State<ListStudentWidget> {
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(50.10),
-            child: TextFormField(
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.vertical(
-                            bottom: Radius.circular(25.0),
-                            top: Radius.circular(25.0))),
-                    hintText: 'Search here',
-                    label: Text('Search'),
-                    prefixIcon: Icon(Icons.search)),
-                onChanged: (value) {
-                  setState(() {
-                    search = value;
-                  });
-                  searchResultFromList();
-                }),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.all(50.10),
+          //   child: TextFormField(
+          //       decoration: const InputDecoration(
+          //           border: OutlineInputBorder(
+          //               borderRadius: BorderRadius.vertical(
+          //                   bottom: Radius.circular(25.0),
+          //                   top: Radius.circular(25.0))),
+          //           hintText: 'Search here',
+          //           label: Text('Search'),
+          //           prefixIcon: Icon(Icons.search)),
+          //       onChanged: (value) {
+          //         setState(() {
+          //           search = value;
+          //         });
+          //         searchResultFromList();
+          //       }),
+          // ),
           Expanded(
             child: ValueListenableBuilder(
               valueListenable: studentListNotifier,
@@ -95,7 +95,8 @@ class _ListStudentWidgetState extends State<ListStudentWidget> {
                           navigator(context, data);
                         },
                         title: Text(data.name),
-                        shape: const Border(bottom: BorderSide(color: Colors.black)),
+                        shape: const Border(
+                            bottom: BorderSide(color: Colors.black)),
                         leading: CircleAvatar(
                             backgroundImage: data.image != null
                                 ? FileImage(File(data.image!))
@@ -105,11 +106,14 @@ class _ListStudentWidgetState extends State<ListStudentWidget> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             IconButton(
+                                color: const Color.fromARGB(255, 108, 20, 14),
                                 onPressed: () {
                                   deleteStudentsData(index);
+                                  
                                 },
                                 icon: const Icon(Icons.delete)),
                             IconButton(
+                                color: const Color.fromARGB(255, 5, 70, 7),
                                 onPressed: () {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
@@ -125,7 +129,7 @@ class _ListStudentWidgetState extends State<ListStudentWidget> {
                                     ),
                                   );
                                 },
-                                icon: const Icon(Icons.edit))
+                                icon: const Icon(Icons.edit)),
                           ],
                         ),
                       );

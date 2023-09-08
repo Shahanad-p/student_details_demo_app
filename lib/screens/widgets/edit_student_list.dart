@@ -1,11 +1,10 @@
-// ignore_for_file: prefer_typing_uninitialized_variables
-
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:student_details_demo_app/screens/widgets/list_student_widgets.dart';
 import '../../db/functions/db_functions.dart';
 import '../../db/model/data_model.dart';
+import 'path_to_edit_student_list.dart';
 
 // ignore: must_be_immutable
 class EditStudentList extends StatefulWidget {
@@ -18,7 +17,6 @@ class EditStudentList extends StatefulWidget {
 
   dynamic imagePath;
 
-  // ignore: use_key_in_widget_constructors
   EditStudentList({
     required this.index,
     required this.name,

@@ -21,7 +21,7 @@ class StudentModel {
   final String address;
 
   @HiveField(6)
-  final String? image;
+  final String? image; 
 
   StudentModel(
       {required this.name,

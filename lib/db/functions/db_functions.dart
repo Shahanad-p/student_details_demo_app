@@ -16,7 +16,7 @@ Future<void> addStudentsData(StudentModel value) async {
 Future<void> editStudentsList(index, StudentModel value) async {
   final studentDB = await Hive.openBox<StudentModel>('student_');
   // studentListNotifier.value.clear();
-  // studentListNotifier.value.addAll(studentDB.values);
+  // studentListNotifier.value..values);addAll(studentDB
   // studentListNotifier.notifyListeners();
   studentDB.putAt(index, value);
   getAllStudentsByList(); // call this to update the list//
@@ -34,5 +34,6 @@ getAllStudentsByList() async {
   final students = studentDB.values.toList();
   studentListNotifier.value = students;
   studentListNotifier.notifyListeners();
+
   // studentListNotifier.notifyListeners();
 }

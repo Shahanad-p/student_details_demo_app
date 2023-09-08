@@ -45,7 +45,7 @@ class _AddStudentWidgetState extends State<AddStudentWidget> {
                 ClipOval(
                   child: CircleAvatar(
                     radius: 60,
-                    backgroundColor: const Color.fromARGB(255, 202, 220, 176),
+                    backgroundColor: const Color.fromARGB(255, 235, 240, 238),
                     backgroundImage: _selectedImage != null
                         ? FileImage(_selectedImage!)
                         : const AssetImage("") //must add image here//
