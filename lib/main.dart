@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:student_details_demo_app/db/model/data_model.g.dart';
+// ignore: unused_import
 import 'package:student_details_demo_app/db/model/data_model_student.dart';
 import 'screens/widgets/list_student_widgets.dart';
 

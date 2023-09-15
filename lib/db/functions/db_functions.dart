@@ -10,6 +10,7 @@ Future<void> addStudentsData(StudentModel value) async {
   await studentDB.add(value);
   getAllStudentsByList(); // call this to update the list//
   // studentListNotifier.value.add(value);
+  
   // studentListNotifier.notifyListeners();
 }
 

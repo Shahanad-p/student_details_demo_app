@@ -4,6 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:student_details_demo_app/screens/widgets/list_student_widgets.dart';
 import '../../db/functions/db_functions.dart';
 import '../../db/model/data_model.dart';
+// ignore: unused_import
 import 'path_to_edit_student_list.dart';
 
 // ignore: must_be_immutable
